@@ -1,0 +1,45 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-4">
+  <h2 class="text-center my-4 bg-light-purple text-white p-3 rounded">Complete Reservation</h2>
+
+  <div class="border rounded p-4 shadow mb-4">
+    <h3 class="text-primary">Flight Details</h3>
+    <p><strong>Airline:</strong> {{ flightData?.operatingAirlines }}</p>
+    <p><strong>Departure City:</strong> {{ flightData?.departureCity }}</p>
+    <p><strong>Arrival City:</strong> {{ flightData?.arrivalCity }}</p>
+    <p><strong>Departure Date:</strong> {{ flightData?.dateOfDeparture }}</p>
+  </div>
+
+  <div class="border rounded p-4 shadow">
+    <h3 class="text-primary">Passenger Details</h3>
+    <form #passengerForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name:</label>
+        <input type="text" id="firstName" name="firstName" class="form-control" [(ngModel)]="reservation.firstName" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="reservation.lastName" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" [(ngModel)]="reservation.email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone:</label>
+        <input type="tel" id="phone" name="phone" class="form-control" [(ngModel)]="reservation.phone" required />
+      </div>
+
+
+      <div class="d-flex justify-content-end">
+        <button type="submit" class="btn btn-light-purple">Confirm</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

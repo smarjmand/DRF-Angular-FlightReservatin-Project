@@ -1,0 +1,12 @@
+.bg-light-purple {
+  background-color: #9b59b6; /* Light Purple */
+}
+
+.btn-light-purple {
+  background-color: #9b59b6; /* Same light purple for the button */
+  color: white;
+}
+
+.btn-light-purple:hover {
+  background-color: #8e44ad; /* A slightly darker shade for hover effect */
+}

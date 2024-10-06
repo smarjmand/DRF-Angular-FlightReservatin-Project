@@ -1,0 +1,30 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-4">
+  <h2 class="text-center my-4 bg-success text-white p-3 rounded">Flights</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-light">
+      <tr>
+        <th>Airlines</th>
+        <th>Departure City</th>
+        <th>Arrival City</th>
+        <th>Departure Date Time</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let flight of data">
+        <td>{{ flight.operatingAirlines }}</td>
+        <td>{{ flight.departureCity }}</td>
+        <td>{{ flight.arrivalCity }}</td>
+        <td>{{ flight.estimatedTimeOfDeparture }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="onSelect(flight.id)">Select</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

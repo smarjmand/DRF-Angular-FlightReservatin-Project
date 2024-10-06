@@ -1,0 +1,42 @@
+.bg-green {
+  background-color: #28a745; /* Green Accent */
+}
+
+.text-green {
+  color: #28a745; /* Green Text */
+}
+
+.btn-green {
+  background-color: #28a745; /* Green Button */
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #218838; /* Darker Green on Hover */
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a clean look */
+}
+
+.container {
+  max-width: 700px; /* Make the container slightly wider */
+}
+
+.bg-light {
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}

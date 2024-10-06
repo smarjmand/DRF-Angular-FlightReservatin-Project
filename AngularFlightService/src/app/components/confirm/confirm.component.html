@@ -1,0 +1,29 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-5">
+  <h2 class="text-center my-4 bg-green text-white p-3 rounded">Reservation Confirmation</h2>
+
+  <div class="border rounded p-4 shadow mb-4 bg-light">
+    <h3 class="text-green">Flight Details</h3>
+    <p><strong>Airline:</strong> {{ flightData?.operatingAirlines }}</p>
+    <p><strong>Departure City:</strong> {{ flightData?.departureCity }}</p>
+    <p><strong>Arrival City:</strong> {{ flightData?.arrivalCity }}</p>
+    <p><strong>Departure Date:</strong> {{ flightData?.dateOfDeparture }}</p>
+  </div>
+
+  <div class="border rounded p-4 shadow mb-4 bg-light">
+    <h3 class="text-green">Passenger Details</h3>
+    <p><strong>First Name:</strong> {{ passengerData?.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ passengerData?.lastName }}</p>
+    <p><strong>Email:</strong> {{ passengerData?.email }}</p>
+    <p><strong>Phone:</strong> {{ passengerData?.phone }}</p>
+  </div>
+
+  <div class="text-center mt-4">
+    <button type="button" class="btn btn-green px-4 py-2" (click)="redirectToFindFlights()">
+      New Reservation
+    </button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
